@@ -4,14 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>sheMentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <nav class="flex flex-row justify-between px-16 bg-primary text-white py-5">
-            <h3 class="font-bold">sheMentor</h3>
+        <nav class="flex flex-row justify-between px-16 bg-primary text-white py-10">
+            <h3 class="font-semibold text-xl">SheMentor</h3>
             <ul class="flex flex-row gap-8">
                 <li><a href="index.html">Home</a></li>
                 <li class="relative group">
@@ -23,21 +28,24 @@
                             </path>
                     </a>
                     <ul class="absolute hidden text-white pt-5 group-hover:block transition-all duration-200">
-                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-t-lg" href="#">Option
+                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-t-lg"
+                                href="#">Option
                                 1</a></li>
-                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-none" href="#">Option
+                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-none"
+                                href="#">Option
                                 2</a></li>
-                        <li><a class=" w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-b-lg" href="#">Option
+                        <li><a class=" w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-b-lg"
+                                href="#">Option
                                 3</a></li>
                     </ul>
                 </li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <div class="bg-[url(../build/imgs/header.png)] bg-no-repeat bg-center bg-cover">
+        <div class="bg-[url(../../build/imgs/header.png)] bg-no-repeat bg-center bg-cover">
             <section class="flex flex-col gap-8 justify-center h-[90vh] text-white text-center items-center px-16">
                 <h1 class="text-8xl max-sm:text-6xl font-bold">Estamos para ayudarte</h1>
-                <p>Bienvenida a tu espacio seguro y confiable. Aquí encontrarás información clara que pueden ayudarte
+                <p class="text-2xl">Bienvenida a tu espacio seguro y confiable. Aquí encontrarás información clara que pueden ayudarte
                     sobre educación sexual y el embarazo.</p>
                 <a class="bg-white rounded-full text-black w-fit px-5 py-3 font-semibold" href="ayuda-btn">Solicitar
                     Ayuda</a>
@@ -45,10 +53,11 @@
         </div>
     </header>
 
-    <main>
-        <section class="max-sm:px-8 px-16 py-8">
-            <h2 class="text-4xl font-bold">Métodos anticonceptivos</h2>
-            <div class="grid gap-8 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">
+    <main class="grid">
+        <!-- Sección de servicios -->
+        <section class="max-sm:px-8 px-16 py-8 mt-10">
+            <h2 class="text-4xl font-bold text-center">Métodos anticonceptivos</h2>
+            <div class="grid gap-8 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:max-w-screen-xl m-auto mt-10">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
                     <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
                     <div class="px-6 py-4">
@@ -61,7 +70,7 @@
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 flex rounded-full m-auto">
                             Ver más
                         </button>
                     </div>
@@ -79,7 +88,7 @@
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
                             Ver más
                         </button>
                     </div>
@@ -96,7 +105,7 @@
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
                             Ver más
                         </button>
                     </div>
@@ -104,6 +113,7 @@
             </div>
         </section>
 
+        <!-- ¿Qué es sheMentor? -->
         <section
             class="bg-primary text-white px-16 max-sm:px-7 py-28 flex gap-12 my-14 items-center max-sm:flex-col-reverse content-between">
             <ul class="flex flex-col gap-12 max-sm:w-fit w-2/3">
@@ -139,7 +149,163 @@
             </div>
         </section>
 
+        <!-- Contactos -->
+        <section class="w-full flex flex-col px-8">
+            <div class="">
+                <h2 class="font-bold text-4xl text-center mb-4">Contactos</h2>
+                <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-4 max-w-screen-xl m-auto">
+                    <div class="bg-primary rounded-md px-6 py-4 flex flex-col gap-8">
+                        <div>
+                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Sistema de Emergencias
+                            </h3>
+                            <p class="text-white">Teléfono: 911</p>
+                        </div>
+                        <button class="p-4 bg-white rounded-md">
+                            Contactar
+                        </button>
+                    </div>
+                    <div class="bg-primary rounded-md px-6 py-4 flex flex-col gap-8">
+                        <div>
+                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Sistema de Emergencias
+                            </h3>
+                            <p class="text-white">Teléfono: 911</p>
+                        </div>
+                        <button class="p-4 bg-white rounded-md">
+                            Contactar
+                        </button>
+                    </div>
+                    <div class="bg-primary rounded-md px-6 py-4 flex flex-col gap-8">
+                        <div>
+                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Sistema de Emergencias
+                            </h3>
+                            <p class="text-white">Teléfono: 911</p>
+                        </div>
+                        <button class="p-4 bg-white rounded-md">
+                            Contactar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section class="bg-primary text-white mt-20 flex justify-center px-8 py-4">
+            <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] py-10 gap-6">
+                <div class="flex flex-col justify-center">
+                    <h2 class="font-bold text-4xl mb-4">
+                        Preguntas Frecuentes
+                    </h2>
+                    <p class="">
+                        Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit. Quos ducimus rerum molestiae deleniti iure!
+                        Doloribus quod fugit praesentium exercitationem
+                        aspernatur vel eveniet illo, laboriosam, cum sunt vero
+                        possimus? Sit, alias.
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Qué es HTML?</summary>
+                        <p class="mt-4">
+                            HTML significa HyperText Markup Language. Es el
+                            estándar para crear páginas web.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Qué es HTML?</summary>
+                        <p class="mt-4">
+                            HTML significa HyperText Markup Language. Es el
+                            estándar para crear páginas web.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Qué es HTML?</summary>
+                        <p class="mt-4">
+                            HTML significa HyperText Markup Language. Es el
+                            estándar para crear páginas web.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Qué es HTML?</summary>
+                        <p class="mt-4">
+                            HTML significa HyperText Markup Language. Es el
+                            estándar para crear páginas web.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apoyo de IA -->
+        <section class="mt-20 grid justify-center">
+            <h2 class="font-bold text-4xl text-center mb-4">Apoyo de IA</h2>
+            <div class="bg-primary mt-6 max-w-screen-lg p-8 md:rounded-md">
+                <h3 class="text-white font-bold mb-6 text-lg">Impulsado por Gemini</h3>
+                <div class="overflow-y-auto h-[28rem] text-white ">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, facilis? Repellendus, perspiciatis. Totam veniam
+                        autem ducimus accusamus doloremque! Sed, nisi dolores!
+                        Quibusdam ut dolore quidem non consequuntur iusto animi
+                        adipisci!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, facilis? Repellendus, perspiciatis. Totam veniam
+                        autem ducimus accusamus doloremque! Sed, nisi dolores!
+                        Quibusdam ut dolore quidem non consequuntur iusto animi
+                        adipisci!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, facilis? Repellendus, perspiciatis. Totam veniam
+                        autem ducimus accusamus doloremque! Sed, nisi dolores!
+                        Quibusdam ut dolore quidem non consequuntur iusto animi
+                        adipisci!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, facilis? Repellendus, perspiciatis. Totam veniam
+                        autem ducimus accusamus doloremque! Sed, nisi dolores!
+                        Quibusdam ut dolore quidem non consequuntur iusto animi
+                        adipisci!
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Ipsum, facilis? Repellendus, perspiciatis. Totam veniam
+                        autem ducimus accusamus doloremque! Sed, nisi dolores!
+                        Quibusdam ut dolore quidem non consequuntur iusto animi
+                        adipisci!
+                    </p>
+                </div>
+                <form class="border-2 rounded-md mt-6 flex">
+                    <input class="bg-transparent text-white w-full p-2 outline-none" type="text" name="" id="" />
+                    <button class="bg-white text-primary p-2  w-fit">Enviar</button>
+                </form>
+            </div>
+        </section>
     </main>
+
+    
+    <footer class="mt-20">
+        <div class="bg-primary text-white p-12 text-center">
+            <h2 class="font-bold text-xl">SheMentor</h2>
+            <span class="h-[2px] bg-white w-full inline-block"></span>
+            <p>Derechos de Autor &copy2024 SheMentor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 
 </html>
