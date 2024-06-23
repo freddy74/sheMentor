@@ -679,6 +679,18 @@ video {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.grid-cols-\[repeat\(auto-fit\2c _minmax\(0px\2c _1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+}
+
+.grid-cols-\[repeat\(auto-fit\2c _minmax\(380px\2c _1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+}
+
+.grid-cols-\[repeat\(auto-fit\2c _minmax\(360px\2c _1fr\)\)\] {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
 .flex-col {
   flex-direction: column;
 }
