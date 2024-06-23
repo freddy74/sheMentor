@@ -1,12 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="main.css" rel="stylesheet">
     <title>sheMentor</title>
 </head>
+
 <body>
-    <h1 class="underline font-bold text-primary">hola</h1>
+    <header>
+        <nav class="flex flex-row justify-between px-16 bg-primary text-white py-5">
+            <h3 class="font-bold">sheMentor</h3>
+            <ul class="flex flex-row gap-8">
+                <li><a href="index.html">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="flex items-center">
+                        <span>Guías</span>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                    </a>
+                    <ul class="absolute hidden text-white pt-5 group-hover:block transition-all duration-200">
+                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-t-lg" href="#">Option
+                                1</a></li>
+                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-none" href="#">Option
+                                2</a></li>
+                        <li><a class=" w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-b-lg" href="#">Option
+                                3</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="bg-[url(../build/imgs/header.png)] bg-no-repeat bg-center bg-cover">
+            <section class="flex flex-col gap-8 justify-center h-[90vh] text-white text-center items-center px-16">
+                <h1 class="text-8xl max-sm:text-6xl font-bold">Estamos para ayudarte</h1>
+                <p>Bienvenida a tu espacio seguro y confiable. Aquí encontrarás información clara que pueden ayudarte
+                    sobre educación sexual y el embarazo.</p>
+                <a class="bg-white rounded-full text-black w-fit px-5 py-3 font-semibold" href="ayuda-btn">Solicitar
+                    Ayuda</a>
+            </section>
+        </div>
+    </header>
+
+    <main>
+        <section class="max-sm:px-8 px-16 py-8">
+            <h2 class="text-4xl font-bold">Métodos anticonceptivos</h2>
+            <div class="grid gap-8 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
+                            placerat
+                            auctor parturient...
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
+                            placerat
+                            auctor parturient...
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <p class="text-gray-700 text-base">
+                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
+                            placerat
+                            auctor parturient...
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            Ver más
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section
+            class="bg-primary text-white px-16 max-sm:px-7 py-28 flex gap-12 my-14 items-center max-sm:flex-col-reverse content-between">
+            <ul class="flex flex-col gap-12 max-sm:w-fit w-2/3">
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-3xl font-bold ">¿Qué es sheMentor?</h2>
+                    <p class="font-light">sheMentor es una plataforma que busca ayudar a mujeres jóvenes a tener
+                        información
+                        clara y confiable
+                        sobre educación sexual y el embarazo. Nuestro objetivo es que puedas tomar decisiones informadas
+                        y
+                        seguras sobre tu cuerpo y tu salud.</p>
+                </section>
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-3xl font-bold">¿Cómo podemos ayudarte?</h2>
+                    <p class="font-light">En sheMentor puedes encontrar información sobre educación sexual y el
+                        embarazo.
+                        También puedes
+                        contactarnos para recibir ayuda personalizada y confidencial.</p>
+                </section>
+                <section class="flex flex-col gap-4">
+                    <h2 class="text-3xl font-bold">¿Por qué es importante la educación sexual?</h2>
+                    <p class="font-light">La educación sexual es importante para que puedas tomar decisiones informadas
+                        y
+                        seguras sobre tu
+                        cuerpo y
+                        tu salud. También es importante para prevenir embarazos no deseados y enfermedades de
+                        transmisión
+                        sexual.</p>
+                </section>
+            </ul>
+            <div class="w-1/3 max-sm:w-full">
+                <img class="w-full rounded-lg" src="./imgs/doctor-consulta.png" alt="imagen-doctor-consulta">
+            </div>
+        </section>
+
+    </main>
 </body>
+
 </html>
