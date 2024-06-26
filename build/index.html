@@ -15,9 +15,10 @@
 
 <body>
     <header>
-        <nav class="fixed md:flex md:items-center md:justify-between px-16 bg-primary md:py-10 py-6 w-full z-10" id="top-nav">
+        <nav class="shadow-lg fixed md:flex md:items-center md:justify-between px-16 bg-primary md:py-10 py-6 w-full z-10 transition-transform duration-300"
+            id="top-nav">
             <div class="flex justify-between items-center">
-                <h3 class="font-semibold text-xl text-white">SheMentor</h3>
+                <h3 class="font-semibold text-xl text-white"><a href="index.html">SheMentor</a></h3>
                 <input id="menu-btn" onclick="adaptiveMenu()" type="checkbox"
                     class="absolute right-1 opacity-0 cursor-pointer">
                 <span id="bars" onclick="handleMenu()" class="md:hidden cursor-pointer text-white block"><svg
@@ -29,34 +30,13 @@
                 </span>
             </div>
 
-            <ul class="bg-white flex flex-col py-10 px-7 w-full min-h-screen left-0 top-[4.5rem] left-[-50rem] gap-8 z-10 absolute transition-all ease-in duration-200 md:py-0 md:z-auto md:static md:min-h-0 md:flex-row md:bg-transparent md:w-auto md:opacity-100 "
+            <ul class="bg-white flex flex-col py-10 px-7 w-full min-h-screen left-0 top-[4.5rem] left-[-50rem] gap-6 z-10 absolute transition-all ease-in duration-200 md:py-0 md:z-auto md:static md:min-h-0 md:flex-row md:bg-transparent md:w-auto md:opacity-100 scroll-smooth items-center"
                 id="menu">
-                <li class="px-6 md:text-white text-black"><a href="index.html">Home</a></li>
-                <li class="relative group px-6 md:text-white text-black">
-                    <a href="#" class="flex items-center">
-                        <span>Guías</span>
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                        </svg>
-                    </a>
-                    <ul class="hidden sm:absolute text-black pt-5 group-hover:block  transition-all duration-500 ">
-                        <li>
-                            <a class="w-[8rem] bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-t-lg transition-all duration-500"
-                                href="#">Option 1</a>
-                        </li>
-                        <li>
-                            <a class="w-[8rem] bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-none transition-all duration-500"
-                                href="#">Option 2</a>
-                        </li>
-                        <li>
-                            <a class="w-[8rem] bg-white hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-b-lg transition-all duration-500"
-                                href="#">Option 3</a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="px-6 md:text-white"><a href="#contact-section">Contact</a></li>
+                <li class="px-6 md:text-white text-black"><a href="index.html">Inicio</a></li>
+                <li class="relative group px-6 md:text-white text-black"><a href="guias.html"
+                        class="flex items-center">Guías</a></li>
+                <li onclick="adaptiveMenu()" class="px-6 md:text-white"><a href="#contact-section">Contactos</a></li>
+                <li onclick="adaptiveMenu()" class="px-6 md:text-white text-black"><a href="#sobre-nosotros">Sobre SheMentor</a></li>
             </ul>
         </nav>
         <div class="bg-[url(../../build/imgs/header.png)] bg-no-repeat bg-center bg-cover pt-20">
@@ -144,7 +124,7 @@
         </section>
 
         <!-- ¿Qué es sheMentor? -->
-        <section
+        <section id="sobre-nosotros"
             class="bg-primary text-white px-16 max-sm:px-7 py-28 flex gap-12 my-14 items-center max-sm:flex-col-reverse content-between">
             <ul class="flex flex-col gap-12 max-sm:w-fit w-2/3">
                 <section class="flex flex-col gap-4">
@@ -194,9 +174,11 @@
                     Contactos
                 </h2>
                 <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-8 max-w-screen-xl m-auto">
-                    <div class="bg-primary rounded-md px-6 py-8 flex flex-col gap-8">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
                         <div>
-                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
                         </div>
                         <div class="text-center text-lg grid gap-3">
                             <h3 class="text-white font-bold">
@@ -205,13 +187,15 @@
                             <p class="text-white">Teléfono: 911</p>
                         </div>
                         <a href="tel:911"
-                            class="text-center p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
                             Contactar
                         </a>
                     </div>
-                    <div class="bg-primary rounded-md px-6 py-8 flex flex-col gap-8">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
                         <div>
-                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
                         </div>
                         <div class="text-center text-lg grid gap-3">
                             <h3 class="text-white font-bold">
@@ -220,13 +204,15 @@
                             <p class="text-white">Teléfono: 1147</p>
                         </div>
                         <a href="tel:1147"
-                            class="text-center p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
                             Contactar
                         </a>
                     </div>
-                    <div class="bg-primary rounded-md px-6 py-8 flex flex-col gap-8">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
                         <div>
-                            <span class="inline-block text-white p-1 border rounded-md">Entidades Públicas</span>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
                         </div>
                         <div class="text-center text-lg grid gap-3">
                             <h3 class="text-white font-bold">
@@ -235,13 +221,14 @@
                             <p class="text-white">Teléfono: 2272-3774</p>
                         </div>
                         <a href="tel:22723774"
-                            class="text-center p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
                             Contactar
                         </a>
                     </div>
-                    <div class="bg-primary rounded-md px-6 py-8 flex flex-col gap-8">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
                         <div>
-                            <span class="inline-block text-white p-1 border rounded-md">Farmacia</span>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Farmacia</span>
                         </div>
                         <div class="text-center text-lg grid gap-3">
                             <h3 class="text-white font-bold">
@@ -250,13 +237,14 @@
                             <p class="text-white">Teléfono: 2636-6001</p>
                         </div>
                         <a href="tel:26366001"
-                            class="text-center p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
                             Contactar
                         </a>
                     </div>
-                    <div class="bg-primary rounded-md px-6 py-8 flex flex-col gap-8">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
                         <div>
-                            <span class="inline-block text-white p-1 border rounded-md">Farmacia</span>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Farmacia</span>
                         </div>
                         <div class="text-center text-lg grid gap-3">
                             <h3 class="text-white font-bold">
@@ -265,7 +253,7 @@
                             <p class="text-white">Teléfono: 2661-5981</p>
                         </div>
                         <a href="tel:26615981"
-                            class="text-center p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
                             Contactar
                         </a>
                     </div>
@@ -274,8 +262,8 @@
         </section>
 
         <!-- Preguntas Frecuentes -->
-        <section class="bg-primary text-white mt-20 flex justify-center px-8 py-4 transition-all duration-300">
-            <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] py-10 gap-6">
+        <section class="bg-primary text-white mt-20 px-16 max-sm:px-7 py-20 gap-12 my-14 flex justify-center transition-all duration-300">
+            <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] py-10 gap-16">
                 <div class="flex flex-col justify-center">
                     <h2 class="font-bold text-4xl mb-4">
                         Preguntas Frecuentes
@@ -388,6 +376,24 @@
         </div>
     </footer>
     <script>
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('top-nav');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll hacia abajo
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll hacia arriba
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
         function handleMenu() {
             const menu = document.getElementById("menu");
             if (menu.classList.contains("left-[-50rem]")) {

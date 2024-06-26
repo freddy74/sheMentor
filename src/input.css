@@ -7,8 +7,5 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-}
-
-.p-absolute {
-    position: absolute;
+    scroll-behavior: smooth;
 }
