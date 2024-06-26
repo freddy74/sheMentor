@@ -667,6 +667,10 @@ video {
   height: 90vh;
 }
 
+.h-\[199px\] {
+  height: 199px;
+}
+
 .max-h-svh {
   max-height: 100svh;
 }
@@ -859,6 +863,11 @@ video {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-1 {
