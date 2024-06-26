@@ -639,6 +639,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-6 {
   height: 1.5rem;
 }
@@ -657,6 +661,10 @@ video {
 
 .h-\[90vh\] {
   height: 90vh;
+}
+
+.h-\[32rem\] {
+  height: 32rem;
 }
 
 .max-h-svh {
@@ -825,20 +833,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
 .bg-white\/30 {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-\[url\(\.\.\/\.\.\/build\/public\/header\.png\)\] {
-  background-image: url(../../build/public/header.png);
-}
-
 .bg-\[url\(\.\.\/\.\.\/build\/imgs\/header\.png\)\] {
   background-image: url(../../build/imgs/header.png);
-}
-
-.bg-\[url\(\.\/imgs\/header\.png\)\] {
-  background-image: url(./imgs/header.png);
 }
 
 .bg-cover {
@@ -964,6 +968,10 @@ video {
   text-align: center;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1014,6 +1022,10 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.leading-loose {
+  line-height: 2;
 }
 
 .text-black {
