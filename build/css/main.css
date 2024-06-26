@@ -833,6 +833,10 @@ video {
   background-image: url(../../build/public/header.png);
 }
 
+.bg-\[url\(\.\.\/\.\.\/build\/imgs\/header\.png\)\] {
+  background-image: url(../../build/imgs/header.png);
+}
+
 .bg-cover {
   background-size: cover;
 }
