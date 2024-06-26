@@ -2,36 +2,41 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="main.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>sheMentor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
     <header>
-        <nav class="flex flex-row justify-between px-16 bg-primary text-white py-5">
-            <h3 class="font-bold">sheMentor</h3>
-            <ul class="flex flex-row gap-8">
-                <li><a href="index.html">Home</a></li>
-                <li class="relative group">
-                    <a href="#" class="flex items-center">
-                        <span>Guías</span>
-                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
-                            </path>
-                    </a>
-                    <ul class="absolute hidden text-white pt-5 group-hover:block transition-all duration-200">
-                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-t-lg" href="#">Option
-                                1</a></li>
-                        <li><a class="w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-none" href="#">Option
-                                2</a></li>
-                        <li><a class=" w-[8rem] bg-white bg-opacity-20 hover:bg-gray-400 py-2 px-4 block whitespace-no-wrap rounded-b-lg" href="#">Option
-                                3</a></li>
-                    </ul>
-                </li>
-                <li><a href="contact.html">Contact</a></li>
+        <nav class="shadow-lg fixed md:flex md:items-center md:justify-between px-16 bg-primary md:py-10 py-6 w-full z-10 transition-transform duration-300"
+            id="top-nav">
+            <div class="flex justify-between items-center">
+                <h3 class="font-semibold text-xl text-white"><a href="index.html">SheMentor</a></h3>
+                <input id="menu-btn" onclick="adaptiveMenu()" type="checkbox"
+                    class="absolute right-1 opacity-0 cursor-pointer">
+                <span id="bars" onclick="handleMenu()" class="md:hidden cursor-pointer text-white block"><svg
+                        class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                            d="M5 7h14M5 12h14M5 17h14" />
+                    </svg>
+                </span>
+            </div>
+
+            <ul class="bg-white flex flex-col py-10 px-7 w-full min-h-screen left-0 top-[4.5rem] left-[-50rem] gap-6 z-10 absolute transition-all ease-in duration-200 md:py-0 md:z-auto md:static md:min-h-0 md:flex-row md:bg-transparent md:w-auto md:opacity-100 scroll-smooth items-center"
+                id="menu">
+                <li class="px-6 md:text-white text-black"><a href="index.html">Inicio</a></li>
+                <li class="relative group px-6 md:text-white text-black"><a href="guias.html"
+                        class="flex items-center">Guías</a></li>
+                <li onclick="adaptiveMenu()" class="px-6 md:text-white"><a href="#contact-section">Contactos</a></li>
+                <li onclick="adaptiveMenu()" class="px-6 md:text-white text-black"><a href="#sobre-nosotros">Sobre SheMentor</a></li>
             </ul>
         </nav>
         <div class="bg-[url(../../build/public/header.png)] bg-no-repeat bg-center bg-cover pt-20">
@@ -50,101 +55,456 @@
         </div>
     </header>
 
-    <main>
-        <section class="max-sm:px-8 px-16 py-8">
-            <h2 class="text-4xl font-bold">Métodos anticonceptivos</h2>
-            <div class="grid gap-8 grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))]">
+    <main class="grid">
+        <!-- Sección de servicios -->
+        <section class="max-sm:px-8 px-16 py-8 mt-10">
+            <h2 class="text-4xl font-bold text-center">
+                Métodos anticonceptivos
+            </h2>
+            <div class="grid gap-8 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] md:max-w-screen-xl m-auto mt-10">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/preservativos.png" alt="Image of Preservativos" />
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <div class="font-bold text-xl mb-2">
+                            Condón
+                        </div>
                         <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
-                            placerat
-                            auctor parturient...
+                            Es una funda de látex (o de otros materiales como poliuretano) que se coloca sobre el pene erecto o dentro de la vagina antes del acto sexual. Los condones son eficaces para prevenir embarazos...
                         </p>
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 flex rounded-full m-auto">
                             Ver más
                         </button>
                     </div>
                 </div>
 
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/pildoras-anticonceptiva.jpg" alt="Image of Preservativos" />
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <div class="font-bold text-xl mb-2">
+                            Píldora anticonceptiva
+                        </div>
                         <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
-                            placerat
-                            auctor parturient...
+                            Es un medicamento oral que se toma diariamente. Contiene hormonas (estrógeno y progestina) que evitan la ovulación. Es muy efectiva cuando se toma correctamente...
                         </p>
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
                             Ver más
                         </button>
                     </div>
                 </div>
                 <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
-                    <img class="w-full" src="./imgs/preservativos.png" alt="Image of Preservativos">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/anillo-vaginal.webp" alt="Image of Preservativos" />
                     <div class="px-6 py-4">
-                        <div class="font-bold text-xl mb-2">Preservativos</div>
+                        <div class="font-bold text-xl mb-2">
+                            Anillo vaginal
+                        </div>
                         <p class="text-gray-700 text-base">
-                            Lorem ipsum dolor sit amet consectetur adipiscing elit, scelerisque justo nulla luctus
-                            placerat
-                            auctor parturient...
+                            Es un anillo flexible que se inserta en la vagina y libera hormonas (estrógeno y progestina) durante tres semanas. Se retira durante una semana para permitir la menstruación...
+
                         </p>
                     </div>
                     <div class="px-6 pt-4 pb-6">
                         <button
-                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-4 rounded-full">
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
+                            Ver más
+                        </button>
+                    </div>   
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/Inyección Anticonceptivas.jpg" alt="Image of Preservativos" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">
+                            Inyección anticonceptiva
+                        </div>
+                        <p class="text-gray-700 text-base">
+                            Consiste en una inyección de progestina que se administra cada tres meses. Inhibe la ovulación y es muy efectiva, aunque no protege contra ITS.
+
+
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
                             Ver más
                         </button>
                     </div>
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/parche-anticonceptivo-como-usar.jpg" alt="Image of Preservativos" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">
+                            Parche anticonceptivo
+                        </div>
+                        <p class="text-gray-700 text-base">
+                            Es un parche adhesivo que se coloca en la piel y libera hormonas (estrógeno y progestina) durante una semana. Se cambia semanalmente...
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
+                            Ver más
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                    <img class="w-full h-[199px] object-cover" src="./imgs/DIU.webp" alt="Image of Preservativos" />
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">
+                            Dispositivo intrauterino
+                        </div>
+                        <p class="text-gray-700 text-base">
+                            Es un pequeño dispositivo en forma de T que un médico inserta en el útero. Puede ser hormonal o de cobre. El DIU hormonal libera progestina...
+
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-6">
+                        <button
+                            class="bg-secondary hover:bg-red-500 transition-all duration-500 text-white font-bold py-2 px-8 rounded-full flex m-auto">
+                            Ver más
+                        </button>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section
+        <!-- ¿Qué es sheMentor? -->
+        <section id="sobre-nosotros"
             class="bg-primary text-white px-16 max-sm:px-7 py-28 flex gap-12 my-14 items-center max-sm:flex-col-reverse content-between">
             <ul class="flex flex-col gap-12 max-sm:w-fit w-2/3">
                 <section class="flex flex-col gap-4">
-                    <h2 class="text-3xl font-bold ">¿Qué es sheMentor?</h2>
-                    <p class="font-light">sheMentor es una plataforma que busca ayudar a mujeres jóvenes a tener
-                        información
-                        clara y confiable
-                        sobre educación sexual y el embarazo. Nuestro objetivo es que puedas tomar decisiones informadas
-                        y
-                        seguras sobre tu cuerpo y tu salud.</p>
+                    <h2 class="text-3xl font-bold">¿Qué es sheMentor?</h2>
+                    <p class="font-light">
+                        sheMentor es una plataforma que busca ayudar a
+                        mujeres jóvenes a tener información clara y
+                        confiable sobre educación sexual y el embarazo.
+                        Nuestro objetivo es que puedas tomar decisiones
+                        informadas y seguras sobre tu cuerpo y tu salud.
+                    </p>
                 </section>
                 <section class="flex flex-col gap-4">
-                    <h2 class="text-3xl font-bold">¿Cómo podemos ayudarte?</h2>
-                    <p class="font-light">En sheMentor puedes encontrar información sobre educación sexual y el
-                        embarazo.
-                        También puedes
-                        contactarnos para recibir ayuda personalizada y confidencial.</p>
+                    <h2 class="text-3xl font-bold">
+                        ¿Cómo podemos ayudarte?
+                    </h2>
+                    <p class="font-light">
+                        En sheMentor puedes encontrar información sobre
+                        educación sexual y el embarazo. También puedes
+                        contactarnos para recibir ayuda personalizada y
+                        confidencial.
+                    </p>
                 </section>
                 <section class="flex flex-col gap-4">
-                    <h2 class="text-3xl font-bold">¿Por qué es importante la educación sexual?</h2>
-                    <p class="font-light">La educación sexual es importante para que puedas tomar decisiones informadas
-                        y
-                        seguras sobre tu
-                        cuerpo y
-                        tu salud. También es importante para prevenir embarazos no deseados y enfermedades de
-                        transmisión
-                        sexual.</p>
+                    <h2 class="text-3xl font-bold">
+                        ¿Por qué es importante la educación sexual?
+                    </h2>
+                    <p class="font-light">
+                        La educación sexual es importante para que puedas
+                        tomar decisiones informadas y seguras sobre tu
+                        cuerpo y tu salud. También es importante para
+                        prevenir embarazos no deseados y enfermedades de
+                        transmisión sexual.
+                    </p>
                 </section>
             </ul>
             <div class="w-1/3 max-sm:w-full">
-                <img class="w-full rounded-lg" src="./imgs/doctor-consulta.png" alt="imagen-doctor-consulta">
+                <img class="w-full rounded-lg" src="./imgs/doctor-consulta.png" alt="imagen-doctor-consulta" />
             </div>
         </section>
 
+        <!-- Contactos -->
+
+        <section id="contact-section" class="w-full flex flex-col px-8">
+            <div class="">
+                <h2 class="font-bold text-4xl text-center mb-4">
+                    Contactos
+                </h2>
+                <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] gap-8 max-w-screen-xl m-auto">
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Sistema de Emergencias
+                            </h3>
+                            <p class="text-white">Teléfono: 911</p>
+                        </div>
+                        <a href="tel:911"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Atención a niños y adolescentes
+                            </h3>
+                            <p class="text-white">Teléfono: 1147</p>
+                        </div>
+                        <a href="tel:1147"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Línea Aquí estoy
+                            </h3>
+                            <p class="text-white">Teléfono: 2272-3774</p>
+                        </div>
+                        <a href="tel:22723774"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Farmacia</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Farmacia Don Gerardo, Puntarenas
+                            </h3>
+                            <p class="text-white">Teléfono: 2636-6001</p>
+                        </div>
+                        <a href="tel:26366001"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Farmacia</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Farmacia Nueva Era, Puntarenas
+                            </h3>
+                            <p class="text-white">Teléfono: 2661-5981</p>
+                        </div>
+                        <a href="tel:26615981"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                IAFA
+                            </h3>
+                            <p class="text-white">Teléfono: 800-IAFA-800</p>
+                        </div>
+                        <a href="tel:800-IAFA-800"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Privadas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Universidad Hispanoamericana
+                            </h3>
+                            <p class="text-white">Teléfono: 2441-9090</p>
+                        </div>
+                        <a href="tel:22723774"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Privadas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Univerisadad iberoamericana
+                            </h3>
+                            <p class="text-white">Teléfono: 2272-3774</p>
+                        </div>
+                        <a href="tel:22723774"
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                    <div class="bg-secondary rounded-md px-6 py-8 flex flex-col gap-8">
+                        <div>
+                            <span
+                                class="inline-block border-[1.7px] border-black text-black text-xs p-1 font-semibold rounded-md">Entidades
+                                Públicas</span>
+                        </div>
+                        <div class="text-center text-lg grid gap-3">
+                            <h3 class="text-white font-bold">
+                                Ser y Crecer
+                            </h3>
+                            <p class="text-white">Teléfono: 2283-2983</p>
+                        </div>
+                        <a href="tel:2283-2983" 
+                            class="text-center font-bold p-4 bg-white rounded-md transition-colors duration-150 hover:bg-white/80">
+                            Contactar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Preguntas Frecuentes -->
+        <section class="bg-primary text-white mt-20 px-16 max-sm:px-7 py-20 gap-12 my-14 flex justify-center transition-all duration-300">
+            <div class="grid md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] py-10 gap-16">
+                <div class="flex flex-col justify-center">
+                    <h2 class="font-bold text-4xl mb-4">
+                        Preguntas Frecuentes
+                    </h2>
+                    <p class="">
+                        Esta sección de la pagina está dedicada a las preguntas frecuentes con el fin de proporcionar una mejor atención a nuestros clientes, con el fin de dar una respuesta rápida para las dudas más comunes que se presentan. 
+                    </p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <details class="border-2 rounded-md p-4 transition-transform duration-200">
+                        <summary class="transition-all duration-350">
+                            ¿Qué métodos anticonceptivos son los más eficaces para prevenir el embarazo?
+                        </summary>
+                        <p class="mt-4 transition-all duration-300 summary-content">
+                            Los métodos anticonceptivos más eficaces incluyen el dispositivo intrauterino (DIU), los implantes anticonceptivos, las inyecciones, las píldoras anticonceptivas, el anillo vaginal y el parche anticonceptivo. Los DIU y los implantes tienen una efectividad superior al 99%.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Cuáles son los efectos secundarios comunes de los métodos anticonceptivos hormonales?</summary>
+                        <p class="mt-4">
+                            Los métodos anticonceptivos hormonales, como la píldora, el anillo vaginal, la inyección y el parche, pueden tener efectos secundarios. Algunos de los más comunes incluyen náuseas, dolor de cabeza, aumento de peso, cambios en el ciclo menstrual, sensibilidad en los senos, y cambios de humor.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Cómo puedo saber si estoy embarazada y qué debo hacer si creo que lo estoy?</summary>
+                        <p class="mt-4">
+                            Los primeros signos de embarazo pueden incluir la ausencia de la menstruación, náuseas matutinas, sensibilidad en los senos y fatiga. Si crees que podrías estar embarazada, la mejor manera de confirmarlo es realizar una prueba de embarazo, que puedes comprar en una farmacia. Si el resultado es positivo, es importante programar una cita con un profesional de la salud para confirmar el embarazo y discutir las opciones disponibles, incluyendo el cuidado prenatal o, si lo deseas, las opciones de interrupción del embarazo.
+                        </p>
+                    </details>
+                    <details class="border-2 rounded-md p-4">
+                        <summary>¿Los métodos anticonceptivos protegen contra las infecciones de transmisión sexual (ITS)?</summary>
+                        <p class="mt-4">
+                            No todos los métodos anticonceptivos protegen contra las ITS. Los únicos métodos que ofrecen esta protección son los condones masculinos y femeninos, ya que actúan como una barrera que impide el contacto directo entre los fluidos corporales de las parejas sexuales. Los métodos anticonceptivos hormonales, como las píldoras, el anillo vaginal, el parche, las inyecciones y el DIU, no protegen contra las ITS.
+                        </p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apoyo de IA -->
+        <section class="mt-20 grid justify-center">
+            <h2 class="font-bold text-4xl text-center mb-4 ">Apoyo de IA</h2>
+            <div class="bg-primary mt-6 max-w-screen-lg p-8 sm:w-[50rem] md:rounded-md">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-white font-bold px-4 flex gap-2">
+                        Impulsado por <span><img src="./imgs/gemini-icon.svg" alt=""></span>
+                    </h3>
+                    <button id="btn-clean-chat" class="bg-white/30 px-4 py-2 rounded-md transition-colors duration-150 text-white hover:bg-white hover:text-black">Limpiar Chat</button>
+                </div>
+                <div id="chat-section" class="overflow-y-auto h-[28rem] text-white flex flex-col gap-4 mt-4 p-4">
+                </div>
+                <div class="border-2 rounded-md mt-6 flex">
+                    <input placeholder="Haz una pregunta" class="bg-transparent text-white w-full p-2 outline-none" type="text" name="inputQuery" id="input-query" />
+                    <button id="btn-send" class="bg-white text-primary p-2 w-fit transition-colors duration-150 hover:bg-white/80">
+                        Enviar
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="mt-20">
+        <div class="bg-primary text-white p-12 text-center">
+            <h2 class="font-bold text-xl">SheMentor</h2>
+            <span class="h-[2px] bg-white w-full inline-block"></span>
+            <p>
+                Derechos de Autor &copy2024 SheMentor. Todos los derechos
+                reservados.
+            </p>
+        </div>
+    </footer>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script type="module" src="./js/main.js"></script>
+    <script>
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById('top-nav');
+
+        window.addEventListener('scroll', function () {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop > lastScrollTop) {
+                // Scroll hacia abajo
+                navbar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll hacia arriba
+                navbar.style.transform = 'translateY(0)';
+            }
+
+            lastScrollTop = scrollTop;
+        });
+
+        function handleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.classList.contains("left-[-50rem]")) {
+                menu.classList.remove("left-[-50rem]");
+            } else {
+                menu.classList.add("left-[-50rem]");
+            }
+        }
+
+        function adaptiveMenu() {
+            let topNav = document.getElementById("top-nav");
+            let navList = document.getElementById("menu");
+            let mobileCheck = document.getElementById("menu-btn");
+            let height = topNav.offsetHeight;
+
+            mobileCheck.addEventListener("click", function () {
+                if (this.checked) {
+                    console.log("checked");
+                    navList.style.top = height + "px";
+                }
+            });
+            handleMenu();
+        }
+    </script>
 </body>
 
 </html>
