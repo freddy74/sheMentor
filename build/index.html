@@ -313,54 +313,22 @@
 
         <!-- Apoyo de IA -->
         <section class="mt-20 grid justify-center">
-            <h2 class="font-bold text-4xl text-center mb-4">Apoyo de IA</h2>
-            <div class="bg-primary mt-6 max-w-screen-lg p-8 md:rounded-md">
-                <h3 class="text-white font-bold mb-6 text-lg">
-                    Impulsado por Gemini
-                </h3>
-                <div class="overflow-y-auto h-[28rem] text-white">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ipsum, facilis? Repellendus, perspiciatis.
-                        Totam veniam autem ducimus accusamus doloremque!
-                        Sed, nisi dolores! Quibusdam ut dolore quidem non
-                        consequuntur iusto animi adipisci!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ipsum, facilis? Repellendus, perspiciatis.
-                        Totam veniam autem ducimus accusamus doloremque!
-                        Sed, nisi dolores! Quibusdam ut dolore quidem non
-                        consequuntur iusto animi adipisci!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ipsum, facilis? Repellendus, perspiciatis.
-                        Totam veniam autem ducimus accusamus doloremque!
-                        Sed, nisi dolores! Quibusdam ut dolore quidem non
-                        consequuntur iusto animi adipisci!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ipsum, facilis? Repellendus, perspiciatis.
-                        Totam veniam autem ducimus accusamus doloremque!
-                        Sed, nisi dolores! Quibusdam ut dolore quidem non
-                        consequuntur iusto animi adipisci!
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Ipsum, facilis? Repellendus, perspiciatis.
-                        Totam veniam autem ducimus accusamus doloremque!
-                        Sed, nisi dolores! Quibusdam ut dolore quidem non
-                        consequuntur iusto animi adipisci!
-                    </p>
+            <h2 class="font-bold text-4xl text-center mb-4 ">Apoyo de IA</h2>
+            <div class="bg-primary mt-6 max-w-screen-lg p-8 sm:w-[50rem] md:rounded-md">
+                <div class="flex items-center justify-between">
+                    <h3 class="text-white font-bold px-4 flex gap-2">
+                        Impulsado por <span><img src="./imgs/gemini-icon.svg" alt=""></span>
+                    </h3>
+                    <button id="btn-clean-chat" class="bg-white/30 px-4 py-2 rounded-md transition-colors duration-150 text-white hover:bg-white hover:text-black">Limpiar Chat</button>
                 </div>
-                <form class="border-2 rounded-md mt-6 flex">
-                    <input class="bg-transparent text-white w-full p-2 outline-none" type="text" name="" id="" />
-                    <button class="bg-white text-primary p-2 w-fit transition-colors duration-150 hover:bg-white/80">
+                <div id="chat-section" class="overflow-y-auto h-[28rem] text-white flex flex-col gap-4 mt-4 p-4">
+                </div>
+                <div class="border-2 rounded-md mt-6 flex">
+                    <input placeholder="Haz una pregunta" class="bg-transparent text-white w-full p-2 outline-none" type="text" name="inputQuery" id="input-query" />
+                    <button id="btn-send" class="bg-white text-primary p-2 w-fit transition-colors duration-150 hover:bg-white/80">
                         Enviar
                     </button>
-                </form>
+                </div>
             </div>
         </section>
     </main>
@@ -375,6 +343,14 @@
             </p>
         </div>
     </footer>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+    </script>
+    <script type="module" src="./js/main.js"></script>
     <script>
 
         let lastScrollTop = 0;
