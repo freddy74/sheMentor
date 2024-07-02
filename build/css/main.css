@@ -651,20 +651,16 @@ video {
   height: 199px;
 }
 
-.h-\[28rem\] {
-  height: 28rem;
-}
-
 .h-\[2px\] {
   height: 2px;
 }
 
-.h-\[90vh\] {
-  height: 90vh;
-}
-
 .h-\[32rem\] {
   height: 32rem;
+}
+
+.h-\[90vh\] {
+  height: 90vh;
 }
 
 .max-h-svh {
@@ -1106,12 +1102,16 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+
+.header-image {
+  background-image: url('../imgs/header.png');
 }
 
 .hover\:bg-red-500:hover {
