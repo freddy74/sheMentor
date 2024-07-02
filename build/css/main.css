@@ -829,18 +829,6 @@ video {
   background-color: rgb(255 255 255 / 0.3);
 }
 
-.bg-\[url\(\.\.\/\.\.\/build\/public\/header\.png\)\] {
-  background-image: url(../../build/public/header.png);
-}
-
-.bg-\[url\(\.\.\/\.\.\/build\/imgs\/header\.png\)\] {
-  background-image: url(../../build/imgs/header.png);
-}
-
-.bg-\[url\(\.\/imgs\/header\.png\)\] {
-  background-image: url(./imgs/header.png);
-}
-
 .bg-cover {
   background-size: cover;
 }
@@ -1094,12 +1082,16 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+}
+
+.header-image {
+  background-image: url('../imgs/header.png');
 }
 
 .hover\:bg-red-500:hover {
